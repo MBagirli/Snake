@@ -1,0 +1,193 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container {
+  width: 608px;
+  height: 608px;
+  background-image: url("img/1562688808.png");
+  position: relative;
+}
+
+.Container__Snake--part {
+  width: 32px;
+  height: 32px;
+  background-color: blue;
+  border-radius: 5px;
+  position: absolute;
+  left: 288px;
+  bottom: 256px;
+  z-index: 3;
+}
+
+#head {
+  background-color: red;
+  z-index: 5;
+}
+
+.food {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  z-index: 4;
+}
+
+.food img {
+  width: 100%;
+  height: 100%;
+}
+
+.counter {
+  height: 32px;
+  border: 1px solid red;
+  color: red;
+  position: absolute;
+  top: 22px;
+  left: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.counter p {
+  padding: 2px;
+  height: 100%;
+}
+
+.Popup_Container {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Popup {
+  width: 50%;
+  height: 50%;
+  background-color: rgba(255, 0, 0, 0.8);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10%;
+}
+
+.Popup h2 {
+  font-size: 32px;
+}
+
+.Popup button {
+  border: 1px solid transparent;
+  width: 70%;
+  height: 10%;
+  color: red;
+  font-size: 24px;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.Popup button:hover {
+  transition: all 0.3s;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  color: #fff;
+  background-color: red;
+}
+
+.Documentation__Container {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.Documentation__Container--1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  margin-bottom: 10px;
+}
+
+.Documentation__Container--1:hover {
+  cursor: pointer;
+}
+
+.Documentation__Container--2 {
+  font-size: 16px;
+  border: 1px solid red;
+  padding: 5px;
+  display: none;
+}
+
+.Open {
+  display: block;
+}
+
+.Error {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 0, 0, 0.8);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+@media (max-width: 1141px) {
+  .Container {
+    display: none;
+  }
+  .Documentation__Container--1 {
+    display: none;
+  }
+  .Documentation__Container--2 {
+    display: none;
+  }
+  .Error {
+    display: flex;
+  }
+}
+
+@media (max-width: 581px) {
+  .Error {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 361px) {
+  .Error {
+    font-size: 10px;
+  }
+}
